@@ -4,7 +4,6 @@ import pandas
 
 # start filling context to the Site
 streamlit.title('My Parents New Healthy Dinner')
-streamlit.text('#Stefan loves Ellen')
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
