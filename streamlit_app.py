@@ -1,6 +1,7 @@
 # load all diffrent packages we need
 import streamlit
 import pandas
+import snowflake.connector
 
 # start filling context to the Site
 streamlit.title('My Parents New Healthy Dinner')
