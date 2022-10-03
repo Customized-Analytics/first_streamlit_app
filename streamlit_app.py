@@ -1,7 +1,6 @@
 # load all diffrent packages we need
 import streamlit
 import pandas
-import snowflake.connector
 
 # start filling context to the Site
 streamlit.title('My Parents New Healthy Dinner')
@@ -38,4 +37,13 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # outout it on the screen as a table
 streamlit.dataframe(fruityvice_normalized)
 
+# Python to Snowflake connector
+import snowflake.connector
 
+# Code to get the Logininformation for the Warehouse out of the Secret-Section
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_data_row = my_cur.fetchone()
+streamlit.text("Hello from Snowflake:")
+streamlit.text(my_data_row)
