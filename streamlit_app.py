@@ -49,6 +49,5 @@ streamlit.header("The Fruit load List contains:")
 streamlit.dataframe(my_data_rows)
 
 # Additional Section to display Text
-streamlit.header('What Fruit would you like to add?')
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('The user entered ', fruit_choice)
+fruit_request = streamlit.text_input('What Fruit would you like to add?')
+streamlit.write('The user entered ', fruit_request)
