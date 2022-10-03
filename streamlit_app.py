@@ -49,7 +49,7 @@ except URLError as e:
     streamlit.error()
 
 # Code to get the Logininformation for the Warehouse out of the Secret-Section
-streamlit.header("The Fruit load List contains:")
+streamlit.header("View Our Fruit List - Add Zout Favorties!")
 # Snowflake-related functions
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
