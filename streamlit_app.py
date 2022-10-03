@@ -50,5 +50,5 @@ streamlit.dataframe(my_data_rows)
 
 # Additional Section to display Text
 streamlit.header('What Fruit would you like to add?')
-requested_fruit = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('Thanks for adding ', requested_fruit)
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
